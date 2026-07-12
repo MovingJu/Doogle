@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Rust 소개",
+    "content": "러스트는 빠르고 안전한 시스템 프로그래밍 언어다. 메모리 안전성을 컴파일 타임에 보장한다.",
+    "url": "/docs/rust-intro"
+  },
+  {
+    "id": 2,
+    "title": "Python 소개",
+    "content": "파이썬은 배우기 쉬운 언어다. 데이터 분석과 머신러닝에서 널리 쓰인다.",
+    "url": "/docs/python-intro"
+  },
+  {
+    "id": 3,
+    "title": "BM25 랭킹이란",
+    "content": "BM25는 TF-IDF를 개선한 검색 랭킹 함수로, 문서 길이 정규화를 포함한다.",
+    "url": "/docs/bm25"
+  },
+  {
+    "id": 4,
+    "title": "역색인 자료구조",
+    "content": "역색인은 단어에서 문서로의 매핑을 저장해 빠른 검색을 가능하게 한다.",
+    "url": "/docs/inverted-index"
+  },
+  {
+    "id": 5,
+    "title": "빈 문서 테스트용",
+    "content": "",
+    "url": "/docs/empty"
+  }
+]
