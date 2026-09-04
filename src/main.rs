@@ -1,7 +1,4 @@
-mod index;
-mod tokenizer;
-
-use axum::{routing::get, routing::post, Router};
+use axum::{Router, routing::get, routing::post};
 
 async fn post_documents() -> &'static str {
     todo!("문서 색인 엔드포인트 — 이슈 #12 참고")

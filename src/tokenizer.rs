@@ -2,9 +2,9 @@
 
 /// 문서/쿼리 텍스트를 색인 가능한 토큰 목록으로 변환한다.
 pub fn tokenize(text: &str) -> Vec<String> {
-    let mut words = split_by_pattern(text);
+    let words = split_by_pattern(text);
     let mut tokens: Vec<String> = Vec::new();
-    while let Some(word) = words.next() {
+    for word in words {
         if word.is_ascii() {
             tokens.push(word.to_lowercase());
         } else {
@@ -22,8 +22,7 @@ const SPLIT_PATTERNS: [char; 5] = [',', ' ', '!', '.', '?'];
 ///
 /// `,`, ` `, `!`, `.`, `?`
 fn split_by_pattern(text: &str) -> impl Iterator<Item = &str> {
-    text
-        .split(|ch| SPLIT_PATTERNS.contains(&ch))
+    text.split(|ch| SPLIT_PATTERNS.contains(&ch))
         .filter(|&text| !text.is_empty())
 }
 
@@ -33,7 +32,7 @@ fn split_by_pattern(text: &str) -> impl Iterator<Item = &str> {
 /// ```rust
 /// use doogle::tokenizer::bigramize_kor;
 ///
-/// assert_eq!(bigramize_kor(&"러스트".chars().collect::<Vec<char>>()), vec!["러스", "스트"]);
+/// assert_eq!(bigramize_kor("러스트".chars().collect::<Vec<char>>()), vec!["러스", "스트"]);
 /// ```
 pub fn bigramize_kor(text: Vec<char>) -> Vec<String> {
     text.windows(2)

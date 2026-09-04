@@ -23,12 +23,12 @@ pub struct Index {
 
 impl Index {
     /// 문서 목록으로 역색인을 만든다. (#10)
-    pub fn build(docs: Vec<Document>) -> Index {
+    pub fn build(_docs: Vec<Document>) -> Index {
         todo!("역색인 빌드 — 이슈 #10 참고")
     }
 
     /// 쿼리와 관련도 높은 순으로 문서를 정렬해 반환한다. (#11)
-    pub fn score(&self, query: &str) -> Vec<ScoredDoc> {
+    pub fn score(&self, _query: &str) -> Vec<ScoredDoc> {
         todo!("BM25 스코어링 — 이슈 #11 참고")
     }
 }
