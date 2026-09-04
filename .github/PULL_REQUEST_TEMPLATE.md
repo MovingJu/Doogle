@@ -1,11 +1,21 @@
-## 요약
+<!-- PR title must follow Conventional Commits: <type>(<scope>)?: <description> -->
+<!-- e.g. feat(tokenizer): add bigram support / fix(index): handle empty query -->
+<!-- Merges use Squash and merge, so this title becomes the commit message. -->
 
-<!-- 뭘 왜 바꿨는지 한두 줄 -->
+## Summary
 
-## 관련 이슈
+<!-- What changed and why, in a line or two -->
+
+## Related issue
 
 Closes #
 
-## 테스트
+## Testing
 
-<!-- 어떻게 확인했는지 (유닛 테스트, 수동 확인 등) -->
+<!-- How you verified this (unit tests, manual checks, etc.) -->
+
+## Checklist
+
+- [ ] `cargo fmt --all -- --check` passes
+- [ ] `cargo clippy --all-targets --all-features -- -D warnings` passes
+- [ ] `cargo test` passes

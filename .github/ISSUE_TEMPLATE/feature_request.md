@@ -1,21 +1,21 @@
 ---
-name: 기능 제안
-about: Doogle에 추가하고 싶은 기능을 제안한다
+name: Feature request
+about: Propose something you'd like to see added to Doogle
 title: ""
 labels: enhancement
 assignees: ""
 ---
 
-## 문제
+## Problem
 
-<!-- 지금 뭐가 아쉬운지, 왜 필요한지 -->
+<!-- What's missing right now, and why it matters -->
 
-## 제안
+## Proposal
 
-<!-- 어떻게 구현할지에 대한 대략적인 방향 -->
+<!-- Rough direction for how this could be implemented -->
 
-## 완료 조건
+## Done criteria
 
-<!-- 이 이슈가 끝났다고 볼 수 있는 구체적인 기준 (테스트로 확인 가능하면 더 좋음) -->
+<!-- Concrete criteria for calling this issue finished (bonus if verifiable by a test) -->
 - [ ]
 - [ ]
