@@ -1,14 +1,14 @@
 # Doogle
 
-범용 문서 검색 엔진. 문서 목록을 색인하고, 쿼리에 맞게 BM25로 순위를 매겨 반환하는 axum 기반 API.
+A general-purpose document search engine. An axum-based API that indexes a list of documents and ranks them by BM25 relevance for a given query.
 
-## 실행
+## Run
 
 ```bash
 cargo run
 ```
 
-기본적으로 `0.0.0.0:3000`에서 뜬다. 문서 색인/검색 예시는 `fixtures/sample_documents.json` 참고.
+Listens on `0.0.0.0:3000` by default. See `fixtures/sample_documents.json` for indexing/search examples.
 
 ```bash
 curl -X POST localhost:3000/documents \
@@ -18,23 +18,23 @@ curl -X POST localhost:3000/documents \
 curl 'localhost:3000/search?q=러스트'
 ```
 
-## 개발 진행 상황
+## Development status
 
-- 로드맵 / 버전 규칙: [이슈 #13](https://github.com/MovingJu/Doogle/issues/13) (pinned)
-- 지금 단계(v1.0.0 — 핵심 검색 엔진)는 4단계로 쪼개져 있음: 토크나이저 → 역색인 → BM25 스코어링 → HTTP API 연결
-- Milestone별 진행률: 리포 Insights → Milestones
+- Roadmap / versioning rules: [issue #13](https://github.com/MovingJu/Doogle/issues/13) (pinned)
+- The current phase (v1.0.0 — core search engine) is split into 4 steps: tokenizer → inverted index → BM25 scoring → HTTP API wiring
+- Per-milestone progress: repo Insights → Milestones
 
-## 구조
+## Structure
 
 ```
 src/
-  main.rs      — axum 라우터 (/documents, /search)
-  tokenizer.rs — 텍스트 → 토큰
-  index.rs     — 역색인 + BM25 스코어링
+  main.rs      — axum router (/documents, /search)
+  tokenizer.rs — text → tokens
+  index.rs     — inverted index + BM25 scoring
 fixtures/
-  sample_documents.json — 로컬 테스트/curl용 목 데이터
+  sample_documents.json — mock data for local testing/curl
 ```
 
-## 버전 규칙
+## Versioning
 
-semver(MAJOR.MINOR.PATCH). 핵심 검색 엔진 완성 시점을 1.0.0으로 잡고, 이후 기능(인증/영속성/검색품질)은 MINOR를 올린다. 자세한 내용은 이슈 #13 참고.
+semver (MAJOR.MINOR.PATCH). v1.0.0 marks the point where the core search engine is complete; later features (auth/persistence/search quality) bump MINOR. See issue #13 for details.
