@@ -17,9 +17,9 @@ jobs:
         run: |
           pattern='^(feat|fix|docs|style|refactor|perf|test|chore|build|ci)(\([a-z0-9_-]+\))?!?: .+'
           if [[ ! "$TITLE" =~ $pattern ]]; then
-            echo "::error::PR 제목이 Conventional Commits 형식이 아닙니다: \"$TITLE\""
-            echo "형식: <type>(<scope>)?: <description>  예) feat(tokenizer): add bigram support"
-            echo "허용 type: feat fix docs style refactor perf test chore build ci"
+            echo "::error::PR title does not follow Conventional Commits: \"$TITLE\""
+            echo "Format: <type>(<scope>)?: <description>  e.g. feat(tokenizer): add bigram support"
+            echo "Allowed types: feat fix docs style refactor perf test chore build ci"
             exit 1
           fi
           echo "OK: $TITLE"

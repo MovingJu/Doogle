@@ -1,11 +1,11 @@
 use axum::{Router, routing::get, routing::post};
 
 async fn post_documents() -> &'static str {
-    todo!("문서 색인 엔드포인트 — 이슈 #12 참고")
+    todo!("document indexing endpoint — see issue #12")
 }
 
 async fn get_search() -> &'static str {
-    todo!("검색 엔드포인트 — 이슈 #12 참고")
+    todo!("search endpoint — see issue #12")
 }
 
 #[tokio::main]

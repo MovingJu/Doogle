@@ -1,26 +1,26 @@
 ---
-name: 버그 리포트
-about: 기대와 다르게 동작하는 부분을 보고한다
+name: Bug report
+about: Report something that doesn't behave as expected
 title: ""
 labels: bug
 assignees: ""
 ---
 
-## 증상
+## What happened
 
-<!-- 무슨 일이 일어나는지 -->
+<!-- What's going on -->
 
-## 재현 방법
+## Steps to reproduce
 
 1.
 2.
 3.
 
-## 기대한 동작
+## Expected behavior
 
-<!-- 원래 어떻게 동작해야 하는지 -->
+<!-- What should happen instead -->
 
-## 환경
+## Environment
 
-- Doogle 버전/커밋:
+- Doogle version/commit:
 - OS:

@@ -1,6 +1,6 @@
-//! 텍스트 → 검색 토큰. 이후 모든 단계(#10, #11)가 이 위에 쌓인다. (#9)
+//! Text -> search tokens. Every later stage (#10, #11) builds on this. (#9)
 
-/// 문서/쿼리 텍스트를 색인 가능한 토큰 목록으로 변환한다.
+/// Converts document/query text into a list of indexable tokens.
 pub fn tokenize(text: &str) -> Vec<String> {
     let words = split_by_pattern(text);
     let mut tokens: Vec<String> = Vec::new();
